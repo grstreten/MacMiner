@@ -1,5 +1,6 @@
 import re
 from collections import deque
+import datadumper as dd
 
 inQueue = deque(maxlen=10)
 outQueue = deque(maxlen=10)
@@ -28,4 +29,4 @@ def strip(text):
         else: duplicate=True
 
         if not duplicate:
-            print(inQueue[-1] + " " + outQueue[-1])
+            dd.insert_connection(inQueue[-1], outQueue[-1])
