@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return render_template("index.html", usage={"hours" : 9, "charger" : 21}, app={"mostUsed", "Goat Simulator"}, network={"analytics" : 476})
+    return render_template("index.html", usage={"hours" : 9, "charger" : 21}, mostUsed="Goat Simulator", network={"analytics" : 476})
 
 @app.route("/data")
 def data():
