@@ -21,11 +21,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return render_template("index", usage={"hours" : 9, "charger" : 21}, app={"mostused", "Goat Simulator"}, network={"analytics" : 476})
+    return render_template("index.html", usage={"hours" : 9, "charger" : 21}, app={"mostUsed", "Goat Simulator"}, network={"analytics" : 476})
 
 @app.route("/data")
 def data():
-    return render_template("fulldata")
+    return render_template("fulldata.html")
 
 app.debug = True
 app.run(host="0.0.0.0", port=6789)
