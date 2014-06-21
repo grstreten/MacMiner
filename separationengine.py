@@ -19,9 +19,13 @@ def strip(text):
         outstring = outmatch.group(1)[0:-1]
 
     if inmatch or outmatch:
+        duplicate = False
         if instring not in inQueue:
             inQueue.append(instring)
+        else: duplicate=True
         if outstring not in outQueue:
             outQueue.append(outstring)
+        else: duplicate=True
 
-    print(inQueue[-1] + " " + outQueue[-1])
+        if not duplicate:
+            print(inQueue[-1] + " " + outQueue[-1])
